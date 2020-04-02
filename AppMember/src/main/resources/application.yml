@@ -1,0 +1,26 @@
+###服务启动端口号
+server:
+  port: 8000
+###服务名称(服务注册到eureka名称)  
+spring:
+    application:
+        name: app-itmayiedu-member
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+
+
+           
+###因为该应用为注册中心，不会注册自己
+    register-with-eureka: true
+###是否需要从eureka上获取注册信息
+    fetch-registry: true
+    
+
+#当服务挂了之后   转到其他页面
+#info配置
+info:
+  app.name: app-itmayiedu-member
+  company.name: blog.itmayiedu.com
