@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mabatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jh.shiro.dao.UserDao">
+    <select id="listUserInfo" resultType="UserEntity">
+        select id,name,age from users order by id asc
+    </select>
+    <select id="getUserInfo" resultType="userentity" parameterType="String">
+        select id,name,age,password from users where name=#{_paramer} limit 1
+    </select>
+    <select id="getAuth" resultType="String" parameterType="int">
+        select auth from users where id=#{_paramer}
+    </select>
+    <update id="updateUserInfo" parameterType="userEntity">
+        update users set name=#{name} where id=#{id}
+    </update>
+</mapper>

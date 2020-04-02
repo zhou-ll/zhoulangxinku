@@ -1,0 +1,13 @@
+server:
+  port: 8088
+spring:
+  profiles:
+    include: postgres,mybatis
+#prefix这个路径的值一定是templates，所以HTML页面必须放在templates目录下，完整路径为：src/main/resources/templates
+#suffix是指文件后缀，设置这个值以后在路由映射匹配时可以设略前缀
+
+  #出现相同的bean时可以覆盖，解决jpa的问题
+  main:
+    allow-bean-definition-overriding: true
+jpa:
+  show-sql: true
