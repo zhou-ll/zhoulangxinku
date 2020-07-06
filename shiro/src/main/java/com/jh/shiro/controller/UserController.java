@@ -60,6 +60,31 @@ public class UserController {
     }
 
     /**
+     * 获取用户信息
+     *
+     * @param
+     * @return com.jh.shiro.entity.Result
+     * @author jh
+     * @date 2020/3/10
+     */
+    @GetMapping(value = "shiro/getinfo")
+    @ResponseBody
+    public DataResult getUserInfo() {
+        DataResult dataResult;
+        try {
+            dataResult=new DataResult();
+            dataResult.setSuccess(true);
+            dataResult.setMessage("成功");
+        } catch (Exception e) {
+            dataResult = new DataResult();
+            dataResult.setMessage("查询失败");
+            dataResult.setSuccess(false);
+            LOG.error(e.getMessage());
+        }
+        return dataResult;
+    }
+
+    /**
      * 测试thymeleaf
      *
      * @param
