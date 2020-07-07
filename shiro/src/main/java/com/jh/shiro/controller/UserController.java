@@ -67,7 +67,7 @@ public class UserController {
      * @author jh
      * @date 2020/3/10
      */
-    @GetMapping(value = "shiro/getinfo")
+    @GetMapping(value = "/shiro/getinfo")
     @ResponseBody
     public DataResult getUserInfo() {
         DataResult dataResult;
