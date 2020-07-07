@@ -18,4 +18,5 @@ public class CORSConfig extends WebMvcConfigurationSupport {
                 .allowedMethods("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH")
                 .allowCredentials(true).maxAge(3600);
     }
+    //zll
 }
