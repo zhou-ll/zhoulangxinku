@@ -75,6 +75,7 @@ public class UserController {
             dataResult=new DataResult();
             dataResult.setSuccess(true);
             dataResult.setMessage("成功");
+            LOG.info("成功");
         } catch (Exception e) {
             dataResult = new DataResult();
             dataResult.setMessage("查询失败");
